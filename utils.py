@@ -8,4 +8,5 @@ def isNullOrEmpty(obj):
 
 def getNumberJSON():
     with open('numberPronous.json', 'r') as file:
-        return json.load(file)
+        numbersJson = json.load(file)
+        return numbersJson["numbers"]
