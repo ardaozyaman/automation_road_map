@@ -2,7 +2,9 @@ from question import Question
 from gemini import *
 import json
 from utils import *
-
+'''
+1. fonksiyon start
+'''
 def q1Func(min:int,max:int,div:int) -> list[int]:
     arrayRemain = []
     for i in range(min,max):
@@ -11,9 +13,15 @@ def q1Func(min:int,max:int,div:int) -> list[int]:
             print(i)
     return arrayRemain
 
+'''
+1. fonksiyon end
+'''
 
+
+'''
+2. fonksiyon start
+'''
 numbersJson = getNumberJSON()
-
 def q2Func(num:int=None,text:str=None):
     if not isNullOrEmpty(num):
         return numberToWords(num)
@@ -68,7 +76,37 @@ def wordsToNumber(text:str):
 testText = "altıyüz yetmiş yedi"
 
 print("benim zeka -> " + q2Func(text=testText))
+
 print("AI (gemini-1.5-flash) yanıtı -> " + askAI(text=testText))
 
+'''
+2. fonksiyon end
+'''
 
 
+
+'''
+3. fonksiyon start
+'''
+def examCalculate(vize1:int=0,vize2:int=0,final:int=0):
+    notes = getNotesJSON()
+    note=""
+    if vize1 >= 0 and vize1 <= 100 and vize2 >= 0 and vize2 <= 100 and final >= 0 and final <= 100:
+        totalNote=percenter(vize1,30)+percenter(vize2,30)+percenter(final,40)
+        for key,value in notes.items():
+            if(round(totalNote) >= int(key)):
+                 note = value
+                 break      
+    else:
+        return False
+    
+    print(round(totalNote))
+
+    return note
+    
+
+print(examCalculate(55,55,100))
+
+'''
+3. fonksiyon end
+'''

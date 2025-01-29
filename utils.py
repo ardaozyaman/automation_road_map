@@ -7,6 +7,14 @@ def isNullOrEmpty(obj):
     return True;
 
 def getNumberJSON():
-    with open('numberPronous.json', 'r') as file:
+    with open('datas/numberPronous.json', 'r') as file:
         numbersJson = json.load(file)
         return numbersJson["numbers"]
+
+def percenter(num:int=0,percent:int=0):
+    return num/100*percent
+
+def getNotesJSON():
+    with open('datas/notes.json', 'r') as file:
+        notesJson = json.load(file)
+        return notesJson
