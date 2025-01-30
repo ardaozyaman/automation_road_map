@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from utils import *
+from packages.utils import *
 GEMINI_API_KEY = "AIzaSyAO0G9aO7rhHrzAS8-9Wl1TqIV8klsRqss"
 
 

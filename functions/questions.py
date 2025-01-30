@@ -1,7 +1,7 @@
 from question import Question
 from gemini import *
 import json
-from utils import *
+from packages.utils import *
 '''
 1. fonksiyon start
 '''
@@ -82,8 +82,6 @@ print("AI (gemini-1.5-flash) yanıtı -> " + askAI(text=testText))
 '''
 2. fonksiyon end
 '''
-
-
 
 '''
 3. fonksiyon start

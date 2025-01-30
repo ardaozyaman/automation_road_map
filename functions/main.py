@@ -1,6 +1,5 @@
 import tkinter as tk
 from question import Question
-import openai
 
 root = tk.Tk()
 root.title("kpi")
