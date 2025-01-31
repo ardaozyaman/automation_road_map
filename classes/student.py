@@ -13,7 +13,7 @@ class Student:
     def __del__(self):
         printClassDel(self)
 
-stu = Student("arda","özyaman","1")
+
 
 class Question:
     def __init__(self,scorePerNet:int=2):
@@ -63,9 +63,6 @@ class Person:
     def addAbility(self,ability:str):
         self._abilities.append(ability)
 
-p = Person("irdo","özyakup","10","tr","kr")
-p.addAbility("ağzıyla araba sesi çıkarmak")
-p.printAllPersonData()
 
 '''
 soru-2 end
